@@ -5,7 +5,7 @@
   ## Description
   This application is a book search utilizing GoogleBooks API and querying using graphQL and MongoDB for database. 
   
-  Deployed application: https://murmuring-depths-58343.herokuapp.com/
+  Deployed application: https://google-booksearch-58343.herokuapp.com
 
   ![MERNbookSearchSS](https://user-images.githubusercontent.com/79202800/152038418-dca90b41-c462-46bf-8e59-e05bf6590246.PNG)
 
