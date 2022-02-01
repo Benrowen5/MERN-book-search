@@ -13,10 +13,16 @@ const resolvers = {
                 return userData;
             }
             throw new AuthenticationError('You are not logged in.');
-        }
+        },
+        users: async () => {
+            return User.find()
+                .select('-__V -password')
+                .populate('friends')
+                .populate('thoughts');
+        },
     },
     Mutation: {
-        loginUser: async (parent, {email, password }) => {
+        loginUser: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
             if(!user) {
                 throw new AuthenticationError('Incorrect credentials.');
